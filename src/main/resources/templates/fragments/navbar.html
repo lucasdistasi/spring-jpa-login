@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -32,7 +32,10 @@
 	      </li>
 	    </ul>
 	    
-	    <a class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" th:href="@{/login}">LOGIN</a>
+	    <a class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" th:href="@{/login}" sec:authorize="!isAuthenticated()">LOGIN</a>
+	    <form action="/logout" method="post">
+	    	<button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit" sec:authorize="isAuthenticated()">LOGOUT</button>
+	    </form>
 	    
 	    
 	  </div>
