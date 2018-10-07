@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!--Navbar-->
+	<nav class="navbar navbar-expand-md navbar-dark primary-color" th:fragment="navbar">
+	
+	  <!-- Collapse button -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+	    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	
+	  <!-- Collapsible content -->
+	  <div class="collapse navbar-collapse text-sm-center" id="basicExampleNav">
+	
+	    <!-- Links -->
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item" th:classappend="${home_current} ? ' active' : '' ">
+	        <a class="nav-link" th:href="@{/home}">Home
+	        </a>
+	      </li>
+	      <li class="nav-item" th:classappend="${userpage_current} ? ' active' : '' ">
+	        <a class="nav-link" th:href="@{/userpage}">User Page</a>
+	      </li>
+	      <li class="nav-item" th:classappend="${adminpage_current} ? ' active' : '' ">
+	        <a class="nav-link" th:href="@{/adminpage}">Admin Page</a>
+	      </li>
+	    </ul>
+	    
+	    <a class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" th:href="@{/login}">LOGIN</a>
+	    
+	    
+	  </div>
+	  <!-- Collapsible content -->
+	
+	</nav>
+	<!--/.Navbar-->
+
+</body>
+</html>
