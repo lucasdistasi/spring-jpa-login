@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<nav th:replace="fragments/navbar :: navbar"></nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="alert alert-danger mt-5" role="alert">
+					<h4 class="alert-heading">Ooopss!</h4>
+				  	<p>You are not supposed to be here.</p>
+				  	<hr>
+					<p class="mb-0">It looks like you have no permissions to acces this site.</p>
+					<p class="mb-0">That's sad :( Isn't ?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>
